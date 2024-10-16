@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checksum Error Checking</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #result {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #e9ecef;
+            border-radius: 4px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Checksum Error Checking</h2>
+
+        <!-- Sender Section -->
+        <div class="section" id="sender">
+            <h3>Sender</h3>
+            <input type="text" id="binaryNumbers" placeholder="Enter 2 or 3 binary numbers separated by commas (e.g. 1010,1101)">
+            <button onclick="generateChecksum()">Generate Checksum</button>
+            <div id="checksumResult"></div>
+        </div>
+
+        <!-- Receiver Section -->
+        <div class="section" id="receiver">
+            <h3>Receiver</h3>
+            <input type="text" id="receivedBinaryNumbers" placeholder="Enter received binary numbers separated by commas">
+            <input type="text" id="receivedChecksum" placeholder="Enter received checksum">
+            <button onclick="checkData()">Check Data</button>
+            <div id="result"></div>
+        </div>
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
